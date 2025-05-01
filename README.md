@@ -13,27 +13,46 @@ The Postman tests are organized into a specific structure:
 ├── /auth
 │   ├── GET /auth
 │   │   ├── Should return 401 when Invalid Token - GET /auth
-│   │   └── ...
+│   │   │   ├── Before Test
+│   │   │   ├── Test
+│   │   │   └── After Test
+│   │   │── ...   
+│   │   │
 │   ├── POST /auth
 │   │   ├── Should return 401 when Invalid Credentials - POST /auth
-│   │   └── ...
-│   └── ...
+│   │   │   ├── Before Test
+│   │   │   ├── Test
+│   │   │   └── After Test
+│   │   │── ...   
+│   │   │
 ├── /users
 │   ├── Setup
-│   │   ├── Generate random User Data
+│   │   ├── Generate Random User Data
 │   ├── GET /users
 │   │   ├── Should return 200 and Contain User IDs as Admin User - GET /users
-│   │   └── ...
+│   │   │   ├── Before Test
+│   │   │   ├── Test
+│   │   │   └── After Test
+│   │   │── ...   
+│   │   │
 │   ├── POST /users
 │   │   ├── Should return 200 and Create new User as Admin User - POST /users
-│   │   └── ...
-│   └── ...
+│   │   │   ├── Before Test
+│   │   │   ├── Test
+│   │   │   └── After Test
+│   │   │── ...   
+│   │   │
 └── ...
+
 ```
 
 1. Each folder represents an endpoint (e.g., /auth, /users).
 2. Under each endpoint folder, there are subfolders for each HTTP method (e.g., GET, POST).
 3. Under each HTTP method folder, there are subfolders for tests that check different scenarios related to that endpoint and method.
+4. Each test folder includes three phases:
+    - ✅ Before Test – setup phase
+    - 🧪 Test – actual request and response verification.
+    - 🧹 After Test – cleanup
 
 ### Dynamic Tests Data:
 1. Every time the tests are executed, data is generated randomly to simulate a variety of scenarios.
