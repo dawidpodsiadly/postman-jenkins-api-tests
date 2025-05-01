@@ -1,5 +1,18 @@
 {
-  "devDependencies": {
+  "name": "postman-tests",
+  "version": "1.0.0",
+  "description": "Postman API tests using Newman",
+  "main": "index.js",
+  "scripts": {
+    "test:all": "npx newman run api-tests.json"
+  },
+  "scriptsComments": {
+    "test:all": "Run all Postman tests in the project using the postman collection api-test.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
     "newman": "^6.2.1"
   }
 }

@@ -72,7 +72,7 @@ This approach ensures that both the API server and the Postman tests are handled
 ### Locally:
 1. Install dependencies for the API server using `cd api-server && npm install`.
 2. Start the server with `node server.js`.
-3. Run Postman tests manually or using Newman `cd postman-api-tests && npx newman run postman-collection.json`.
+3. Run Postman tests manually or using Newman `cd postman-api-tests && npx newman run api-tests.json`.
 
 ### In Jenkins:
 1. Create pipeline script from SCM and pass correct data to the repository.
